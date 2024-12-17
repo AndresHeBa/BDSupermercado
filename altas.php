@@ -18,9 +18,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['formulario'])) {
     switch ($formulario) {
         case "articulo":
             $nombreArticulo = $_POST['nombreArticulo'];
-            $precioCompra = !empty($_POST['precioCompra']) ? "'" . $conn->real_escape_string($_POST['precioCompra']) : "NULL";
-            $precioVenta = !empty($_POST['precioVenta']) ? "'" . $conn->real_escape_string($_POST['precioVenta']) : "NULL";
-            $codigoProveedor = !empty($_POST['codigoProveedor']) ? "'" . $conn->real_escape_string($_POST['codigoProveedor']) : "NULL";
+            $precioCompra = !empty($_POST['precioCompra']) ? $conn->real_escape_string($_POST['precioCompra']) : "NULL";
+            $precioVenta = !empty($_POST['precioVenta']) ? $conn->real_escape_string($_POST['precioVenta']) : "NULL";
+            $codigoProveedor = !empty($_POST['codigoProveedor']) ? $conn->real_escape_string($_POST['codigoProveedor']) : "NULL";
             // $tipoArticulo = !empty($_POST['tipoArticulo']) ? $conn->real_escape_string($_POST['tipoArticulo']) : "NULL";
             $tipoArticulo = !empty($_POST['tipoArticulo']) ? "'" . $conn->real_escape_string($_POST['tipoArticulo']) . "'" : "NULL";
 
