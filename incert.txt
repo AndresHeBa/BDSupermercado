@@ -1,0 +1,84 @@
+-- Inserción de sucursales adicionales
+INSERT INTO sucursal (Ciudad, Direccion, CP) VALUES
+('Guadalajara', 'Av. Vallarta #789', '44130'),
+('Monterrey', 'Av. Gonzalitos #456', '64460'),
+('Puebla', 'Blvd. 5 de Mayo #123', '72000'),
+('Querétaro', 'Av. Constituyentes #789', '76000'),
+('León', 'Blvd. Campestre #456', '37000'),
+('Tijuana', 'Av. Revolución #123', '22000'),
+('Mérida', 'Paseo Montejo #789', '97000'),
+('Cancún', 'Av. Tulum #456', '77500'),
+('Toluca', 'Av. Morelos #123', '50000'),
+('Veracruz', 'Av. Díaz Mirón #789', '91700');
+
+-- Inserción de empleados adicionales
+INSERT INTO empleado (Nombre, Telefono, Puesto, Sueldo, RFC, CodigoSucursal) VALUES
+('María González', '4491234567', 'Gerente', 25000.00, 'GOGM850615ABC', 3),
+('Juan Pérez', '4499876543', 'Gerente', 25000.00, 'PEPJ860723DEF', 4),
+('Ana Martínez', '4495555555', 'Cajero', 15000.00, 'MARA870831GHI', 3),
+('Carlos Rodríguez', '4494444444', 'Almacenista', 16000.00, 'RODC880908JKL', 4),
+('Laura Sánchez', '4493333333', 'Cajero', 15000.00, 'SAML890115MNO', 5),
+('Roberto Torres', '4492222222', 'Vendedor', 18000.00, 'TORR900222PQR', 5),
+('Patricia López', '4491111111', 'Gerente', 25000.00, 'LOPP910330STU', 6),
+('Miguel Ángel Díaz', '4490000000', 'Vendedor', 18000.00, 'DIAM920407VWX', 6),
+('Isabel Castro', '4499999999', 'Cajero', 15000.00, 'CAII930514YZA', 7),
+('Fernando Ruiz', '4498888888', 'Almacenista', 16000.00, 'RUIF940621BCD', 7);
+
+-- Actualización de gerentes en sucursales
+UPDATE sucursal SET CodigoGerente = 7 WHERE CodigoSucursal = 3;
+UPDATE sucursal SET CodigoGerente = 8 WHERE CodigoSucursal = 4;
+UPDATE sucursal SET CodigoGerente = 9 WHERE CodigoSucursal = 5;
+UPDATE sucursal SET CodigoGerente = 10 WHERE CodigoSucursal = 6;
+UPDATE sucursal SET CodigoGerente = 11 WHERE CodigoSucursal = 7;
+
+-- Inserción de proveedores adicionales
+INSERT INTO proveedor (Telefono, Nombre, CodigoSucursal, TipoArticulo, Ciudad, Direccion) VALUES
+('5551234567', 'Bimbo', 3, 'Pan', 'Guadalajara', 'Calle Industrial #123'),
+('5559876543', 'Coca-Cola', 4, 'Bebidas', 'Monterrey', 'Av. Industria #456'),
+('5555555555', 'Gamesa', 5, 'Galletas', 'Puebla', 'Blvd. Industria #789'),
+('5554444444', 'Marinela', 6, 'Repostería', 'Querétaro', 'Calle Fábrica #123'),
+('5553333333', 'Barcel', 7, 'Botanas', 'León', 'Av. Industrial #456'),
+('5552222222', 'Sabritas', 8, 'Botanas', 'Tijuana', 'Blvd. Producción #789'),
+('5551111111', 'La Costeña', 9, 'Enlatados', 'Mérida', 'Calle Manufactura #123'),
+('5550000000', 'Del Valle', 10, 'Bebidas', 'Cancún', 'Av. Industrial #456'),
+('5559999999', 'Nestlé', 3, 'Varios', 'Toluca', 'Blvd. Industria #789'),
+('5558888888', 'Herdez', 4, 'Enlatados', 'Veracruz', 'Calle Fábrica #123');
+
+-- Inserción de artículos adicionales
+INSERT INTO articulo (Nombre, PrecioCompra, PrecioVenta, CodigoProveedor, TipoArticulo) VALUES
+('Pan Blanco', 15.00, 25.00, 5, 'Pan'),
+('Refresco Cola', 8.00, 15.00, 6, 'Bebidas'),
+('Galletas María', 10.00, 18.00, 7, 'Galletas'),
+('Pastelitos', 12.00, 20.00, 8, 'Repostería'),
+('Papas Fritas', 9.00, 16.00, 9, 'Botanas'),
+('Chicharrones', 11.00, 19.00, 10, 'Botanas'),
+('Frijoles Enlatados', 13.00, 22.00, 11, 'Enlatados'),
+('Jugo Naranja', 14.00, 23.00, 12, 'Bebidas'),
+('Chocolate', 16.00, 28.00, 13, 'Dulces'),
+('Sopa Enlatada', 12.00, 21.00, 14, 'Enlatados');
+
+-- Inserción de ventas adicionales
+INSERT INTO venta (NombreVendedor, TotalVenta, CodigoSucursal, Fecha) VALUES
+('María González', 2500.00, 3, '2024-12-13'),
+('Juan Pérez', 1800.00, 4, '2024-12-13'),
+('Ana Martínez', 2200.00, 3, '2024-12-14'),
+('Carlos Rodríguez', 1900.00, 4, '2024-12-14'),
+('Laura Sánchez', 2100.00, 5, '2024-12-15'),
+('Roberto Torres', 2300.00, 5, '2024-12-15'),
+('Patricia López', 2000.00, 6, '2024-12-16'),
+('Miguel Ángel Díaz', 2400.00, 6, '2024-12-16'),
+('Isabel Castro', 1700.00, 7, '2024-12-17'),
+('Fernando Ruiz', 2600.00, 7, '2024-12-17');
+
+-- Inserción de detalles de venta
+INSERT INTO detallesventa (CodigoVenta, CodigoArticulo, CantidadArticulo) VALUES
+(8, 3, 5),
+(8, 4, 3),
+(9, 5, 4),
+(9, 6, 2),
+(10, 7, 6),
+(11, 8, 3),
+(12, 9, 4),
+(13, 10, 5),
+(14, 3, 3),
+(15, 4, 4);
