@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Altas</title>
+    <style>
+        .formulario {
+            display: none; /* Ocultar formularios por defecto */
+            margin-top: 20px;
+        }
+        input {
+            display: block;
+            margin: 10px 0;
+            padding: 8px;
+            width: 100%;
+            max-width: 400px;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+    <script src="altas.js" defer></script>
+</head>
+<body>
+    <h1>Selecciones que tipo de alta quiere realizar</h1>
+    <select name="alta" id="alta" class="select">
+        <option value="" >Selecciona una opcion</option>
+        <option value="articulo">Articulo</option>
+        <option value="empleado">Empleado</option>
+        <option value="proveedor">Proveedor</option>
+        <option value="sucursal">Sucursal</option>
+        <option value="venta">Venta</option>
+        <button type="submit">Enviar</button>
+    </select>
+
+
+    <form action="altas.php" method="post" id="form-articulo" class="formulario">
+        <h2>Alta de un articulo</h2>
+        <input type="hidden" name="formulario" value="articulo">
+        <!-- <input type="number" name="codigoArticulo" id="codigoArticulo" placeholder="Codigo del articulo" disabled> -->
+        <input type="text" name="nombreArticulo" id="nombreArticulo" placeholder="Nombre">
+        <input type="number" name="precioCompra" id="precioCompra" placeholder="Precio de compra">
+        <input type="number" name="precioVenta" id="precioVenta" placeholder="Precio de venta">
+        <input type="number" name="codigoProveedor" id="codigoProveedor" placeholder="Codigo de proveedor">
+        <input type="text" name="tipoArticulo" id="tipoArticulo" placeholder="Tipo de articulo">
+        <button type="submit">Enviar</button>
+
+    </form>
+
+    <form action="altas.php" method="post" id="form-empleado" class="formulario">
+        <h2>Alta de empleado</h2>
+        <input type="hidden" name="formulario" value="empleado">
+        <!-- <input type="number" name="codigoEmpleado" id="codigoEmpleado" placeholder="Codigo del empleado" disabled> -->
+        <input type="text" name="nombreEmpleado" id="nombreEmpleado" placeholder="Nombre del empleado" required>
+        <input type="tel" name="telefono" id="telefono" placeholder="Telefono" required>
+        <input type="text" name="puesto" id="puesto" placeholder="Puesto del empleado" required>
+        <input type="number" name="sueldo" id="sueldo" placeholder="Sueldo" required>
+        <input type="text" name="rfc" id="rfc" placeholder="RFC" required>
+        <input type="number" name="codigoGerente" id="codigoGerente" placeholder="Codigo del gerente">
+        <input type="number" name="codigoSucursal" id="codigoSucursal" placeholder="Codigo de la sucursal donde trabaja">
+        <button type="submit">Enviar</button>
+
+    </form>
+
+    <form action="altas.php" method="post" id="form-proveedor" class="formulario">
+        <h2>Alta proveedor</h2>
+        <input type="hidden" name="formulario" value="proveedor">
+        <!-- <input type="number" name="codigoProveedor" id="codigoProveedor" placeholder="Codigo del proveeodrt"> -->
+        <input type="text" name="nombreProveedor" id="nombreProveedor" placeholder="Nombre del proveedor">
+        <input type="tel" name="telefonoProveedor" id="telefonoProveedor" placeholder="Telefono">
+        <input type="number" name="codigoSucursalP" id="codigoSucursalP" placeholder="Codigo de la sucursal a la que surte">
+        <input type="text" name="tipoArticuloP" id="tipoArticuloP" placeholder="Tipo de articulo que vente el proveedor">
+        <input type="text" name="ciudad" id="ciudad" placeholder="Ciudad">
+        <input type="text" name="direccionP" id="direccionP" placeholder="Direccion">
+        <button type="submit">Enviar</button>
+
+    </form>
+
+    <form action="altas.php" method="post" id="form-sucursal" class="formulario">
+        <h2>Alta de Sucursal</h2>
+        <input type="hidden" name="formulario" value="sucursal">
+        <!-- <input type="number" id="CodigoSucursal" name="CodigoSucursal" placeholder="Código de Sucursal" required> -->
+        <input type="number" id="CodigoGerente" name="CodigoGerente" placeholder="Código de Gerente">
+        <input type="number" id="CodigoProveedor" name="CodigoProveedor" placeholder="Código de Proveedor">
+        <input type="text" id="Ciudad" name="Ciudad" maxlength="50" placeholder="Ciudad">
+        <input type="text" id="Direccion" name="Direccion" maxlength="100" placeholder="Dirección">
+        <input type="number" id="CP" name="CP" maxlength="10" placeholder="Código Postal">
+        <button type="submit">Enviar</button>
+    </form>
+
+    <form action="altas.php" method="post" id="form-venta" class="formulario">
+        <h2>Alta de Venta</h2>
+        <input type="hidden" name="formulario" value="vendedor">
+        <!-- <input type="number" id="CodigoVenta" name="CodigoVenta" placeholder="Código de Venta" required> -->
+        <input type="text" id="NombreVendedor" name="NombreVendedor" maxlength="100" placeholder="Nombre del Vendedor" required>
+        <input type="number" step="0.01" id="TotalVenta" name="TotalVenta" placeholder="Total de la Venta">
+        <input type="number" id="CodigoSucursalVenta" name="CodigoSucursalVenta" placeholder="Código de Sucursal">
+        <input type="date" id="Fecha" name="Fecha" placeholder="Fecha de la Venta">
+        <button type="submit">Enviar</button>
+    </form>
+</body>
+</html>
