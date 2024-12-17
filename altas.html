@@ -37,7 +37,6 @@
         <option value="empleado">Empleado</option>
         <option value="proveedor">Proveedor</option>
         <option value="sucursal">Sucursal</option>
-        <option value="venta">Venta</option>
         <button type="submit">Enviar</button>
     </select>
 
@@ -93,17 +92,6 @@
         <input type="text" id="Ciudad" name="Ciudad" maxlength="50" placeholder="Ciudad">
         <input type="text" id="Direccion" name="Direccion" maxlength="100" placeholder="Dirección">
         <input type="number" id="CP" name="CP" maxlength="10" placeholder="Código Postal">
-        <button type="submit">Enviar</button>
-    </form>
-
-    <form action="altas.php" method="post" id="form-venta" class="formulario">
-        <h2>Alta de Venta</h2>
-        <input type="hidden" name="formulario" value="vendedor">
-        <!-- <input type="number" id="CodigoVenta" name="CodigoVenta" placeholder="Código de Venta" required> -->
-        <input type="text" id="NombreVendedor" name="NombreVendedor" maxlength="100" placeholder="Nombre del Vendedor" required>
-        <input type="number" step="0.01" id="TotalVenta" name="TotalVenta" placeholder="Total de la Venta">
-        <input type="number" id="CodigoSucursalVenta" name="CodigoSucursalVenta" placeholder="Código de Sucursal">
-        <input type="date" id="Fecha" name="Fecha" placeholder="Fecha de la Venta">
         <button type="submit">Enviar</button>
     </form>
 </body>

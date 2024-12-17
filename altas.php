@@ -34,8 +34,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['formulario'])) {
             $puesto = $_POST['puesto'];
             $sueldo = $_POST['sueldo'];
             $rfc = $_POST['rfc'];
-            $codigoGerente = !empty($_POST['codigoGerente']) ? "'" . $conn->real_escape_string($_POST['codigoGerente']) : "NULL";
-            $codigoSucursal = !empty($_POST['codigoSucursal']) ? "'" . $conn->real_escape_string($_POST['codigoSucursal']) : "NULL";
+            $codigoGerente = !empty($_POST['codigoGerente']) ? $conn->real_escape_string($_POST['codigoGerente']) : "NULL";
+            $codigoSucursal = !empty($_POST['codigoSucursal']) ? $conn->real_escape_string($_POST['codigoSucursal']) : "NULL";
 
             $sql = "INSERT INTO empleado (Nombre, Telefono, Puesto, Sueldo, RFC, CodigoGerente, CodigoSucursal) 
                     VALUES ('$nombreEmpleado', '$telefono', '$puesto', '$sueldo', '$rfc', $codigoGerente, $codigoSucursal)";
@@ -44,7 +44,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['formulario'])) {
         case "proveedor":
             $nombreProveedor = $_POST['nombreProveedor'];
             $telefonoProveedor = $_POST['telefonoProveedor'];
-            $codigoSucursalP = !empty($_POST['codigoSucursalP']) ? "'" . $conn->real_escape_string($_POST['codigoSucursalP']) : "NULL";
+            $codigoSucursalP = !empty($_POST['codigoSucursalP']) ? $conn->real_escape_string($_POST['codigoSucursalP']) : "NULL";
             $tipoArticuloP = !empty($_POST['tipoArticuloP']) ? "'" . $conn->real_escape_string($_POST['tipoArticuloP']) : "NULL";
             $ciudad = !empty($_POST['ciudad']) ? "'" . $conn->real_escape_string($_POST['ciudad']) : "NULL";
             $direccionP = !empty($_POST['direccionP']) ? "'" . $conn->real_escape_string($_POST['direccionP']) : "NULL";
@@ -62,16 +62,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['formulario'])) {
 
             $sql = "INSERT INTO sucursal (CodigoGerente, CodigoProveedor, Ciudad, Direccion, CP) 
                     VALUES ($CodigoGerente, $CodigoProveedor, '$Ciudad', '$Direccion', '$CP')";
-            break;
-
-        case "venta":
-            $NombreVendedor = $_POST['NombreVendedor'];
-            $TotalVenta = !empty($_POST['TotalVenta']) ? "'" . $conn->real_escape_string($_POST['TotalVenta']) : "NULL";
-            $CodigoSucursalVenta = !empty($_POST['codigoSucursalVenta']) ? "'" . $conn->real_escape_string($_POST['codigoSucursalVenta']) : "NULL";
-            $Fecha = !empty($_POST['Fecha']) ? "'" . $conn->real_escape_string($_POST['Fecha']) : "NULL";
-
-            $sql = "INSERT INTO venta (NombreVendedor, TotalVenta, CodigoSucursal, Fecha) 
-                    VALUES ('$NombreVendedor', $TotalVenta, $CodigoSucursalVenta, $Fecha)";
             break;
 
         default:
