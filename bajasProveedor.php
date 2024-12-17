@@ -14,6 +14,7 @@
             echo "Proveedor borrado.";
         }
     ?>
+        <!-- Html Aqui!!!!!! -->
     <body>
     <h4>Borrar Articulo</h4>
     <form method="POST">

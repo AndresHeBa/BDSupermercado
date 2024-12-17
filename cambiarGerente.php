@@ -1,3 +1,4 @@
+<!-- AQUI NO VAN ESTILOS :))))))) -->
 <?php 
 include 'mySQLConnection.php';
 

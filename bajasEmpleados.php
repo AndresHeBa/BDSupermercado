@@ -14,6 +14,7 @@
             echo "Empleado borrado.";
         }
     ?>
+    <!-- Html Aqui!!!!!! -->
     <body>
     <h4>Borrar Empleado</h4>
     <form method="POST">

@@ -1,3 +1,5 @@
+<!-- AQUI NO VAN ESTILOS :))))))) -->
+
 <?php
     // Conexión a la base de datos (utilizando mysqli)
     $servername = "localhost";
@@ -13,7 +15,7 @@
     $conn->set_charset("utf8");
 ?>
 
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
@@ -60,4 +62,4 @@
         <?php endif; ?>
     </div>
 </body>
-</html>
+</html> -->
