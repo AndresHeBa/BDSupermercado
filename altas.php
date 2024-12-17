@@ -37,12 +37,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['formulario'])) {
             $nombreProveedor = $_POST['nombreProveedor'];
             $telefonoProveedor = $_POST['telefonoProveedor'];
             $codigoSucursalP = !empty($_POST['codigoSucursalP']) ? $conn->real_escape_string($_POST['codigoSucursalP']) : "NULL";
-            $tipoArticuloP = !empty($_POST['tipoArticuloP']) ? "'" . $conn->real_escape_string($_POST['tipoArticuloP']) : "NULL";
-            $ciudad = !empty($_POST['ciudad']) ? "'" . $conn->real_escape_string($_POST['ciudad']) : "NULL";
-            $direccionP = !empty($_POST['direccionP']) ? "'" . $conn->real_escape_string($_POST['direccionP']) : "NULL";
+            $tipoArticuloP = !empty($_POST['tipoArticuloP']) ? "'" . $conn->real_escape_string($_POST['tipoArticuloP']) . "'" : "NULL";
+            $ciudad = !empty($_POST['ciudad']) ? "'" . $conn->real_escape_string($_POST['ciudad']) . "'" : "NULL";
+            $direccionP = !empty($_POST['direccionP']) ? "'" . $conn->real_escape_string($_POST['direccionP']) . "'" : "NULL";
 
             $sql = "INSERT INTO proveedor (Telefono, Nombre, CodigoSucursal, TipoArticulo, Ciudad, Direccion) 
-                    VALUES ('$telefonoProveedor', '$nombreProveedor', $codigoSucursalP, $tipoArticuloP, $ciudad, $direccionP)";
+                        VALUES ('$telefonoProveedor', '$nombreProveedor', $codigoSucursalP, $tipoArticuloP, $ciudad, $direccionP)";
             break;
 
         case "sucursal":
@@ -79,4 +79,3 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['formulario'])) {
 
 // Cerrar la conexión
 $conn->close();
-?>
