@@ -38,7 +38,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && !empty($_SESSION['carrito'])) {
         unset($_SESSION['carrito']);
         
         echo "Venta realizada con éxito!";
-        echo "<br><a href='formulario_busqueda.php'>Realizar otra venta</a>";
+        echo "<br><a href='registroVentas.php'>Realizar otra venta</a>";
         
     } catch (Exception $e) {
         $conn->rollback();
