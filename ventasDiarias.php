@@ -1,5 +1,6 @@
 <?php 
 include 'mySQLConnection.php';
+include 'header.php';
 
 $sql = "SELECT NombreVendedor, TotalVenta, CodigoSucursal, Fecha, totalDia(Fecha) as TotalDia
         FROM venta ORDER BY Fecha, CodigoSucursal;";
@@ -27,3 +28,6 @@ if ($result->num_rows > 0) {
 
 $conn->close();
 ?>
+<html>
+    <link rel="stylesheet" href="est/consul.css">
+</html>

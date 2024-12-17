@@ -1,5 +1,6 @@
 <?php 
 include 'mySQLConnection.php';
+include 'header.php';
 
 $sql = "SELECT * 
         FROM reporte_provedores_y_articulos_por_sucursal;";
@@ -36,3 +37,6 @@ if ($result->num_rows > 0) {
 
 $conn->close();
 ?>
+<html>
+    <link rel="stylesheet" href="est/consul.css">
+</html>

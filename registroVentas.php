@@ -1,5 +1,5 @@
 <?php
-
+include 'header.php';
 // Conexión a la base de datos
 include 'mySQLConnection.php';
 session_start();
@@ -43,19 +43,23 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['buscar'])) {
 <html>
 <head>
     <title>Buscar Artículo</title>
+    <link rel="stylesheet" href="est/venta.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <body>
-    <h2>Agregar Artículo a la Venta</h2>
-    <form method="POST" action="">
-        <label>Código de Artículo:</label>
-        <input type="number" name="codigo_articulo" required>
-        <label>Cantidad:</label>
-        <input type="number" name="cantidad" min="1" required>
-        <input type="submit" name="buscar" value="Agregar al Carrito">
-    </form>
+    <div id="agregarArticuloForm">
+        <h2>Agregar Artículo a la Venta</h2>
+        <form method="POST" action="">
+            <label>Código de Artículo:</label>
+            <input type="number" name="codigo_articulo" required>
+            <label>Cantidad:</label>
+            <input type="number" name="cantidad" min="1" required>
+            <input type="submit" name="buscar" value="Agregar al Carrito">
+        </form>
+    </div>
 
-    <h3>Artículos en el Carrito:</h3>
-    <table border="1">
+    <h3 style="text-align: center;">Artículos en el Carrito:</h3>
+    <table>
         <tr>
             <th>Código</th>
             <th>Nombre</th>
@@ -84,22 +88,25 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['buscar'])) {
     </table>
 
     <?php if (!empty($_SESSION['carrito'])) { ?>
-        <form method="POST" action="procesar_venta.php">
-            <label>Nombre del Vendedor:</label>
-            <input type="text" name="vendedor" required>
-            <label>Sucursal:</label>
-            <select name="sucursal" required>
-                <?php
-                $sql = "SELECT CodigoSucursal, Ciudad FROM sucursal";
-                $result = $conn->query($sql);
-                while($row = $result->fetch_assoc()) {
-                    echo "<option value='" . $row['CodigoSucursal'] . "'>" . $row['Ciudad'] . "</option>";
-                }
-                ?>
-            </select>
-            <input type="submit" value="Completar Venta">
-        </form>
+        <div id="agregarArticuloForm">
+            <form  id="formVenta" method="POST" action="procesar_venta.php">
+                <label>Nombre del Vendedor:</label>
+                <input type="text" name="vendedor" required>
+                <label>Sucursal:</label>
+                <select name="sucursal" required>
+                    <?php
+                    $sql = "SELECT CodigoSucursal, Ciudad FROM sucursal";
+                    $result = $conn->query($sql);
+                    while($row = $result->fetch_assoc()) {
+                        echo "<option value='" . $row['CodigoSucursal'] . "'>" . $row['Ciudad'] . "</option>";
+                    }
+                    ?>
+                </select>
+                <input type="submit" value="Completar Venta">
+                </form>
+        </div>
     <?php } ?>
+    
+    <div id="responseMessage" style="margin-top:20px; color: green;"></div>
 </body>
 </html>
-

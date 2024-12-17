@@ -1,5 +1,6 @@
 <?php 
 include 'mySQLConnection.php';
+include 'header.php';
 
 $sql = "SELECT * 
         FROM reporte_ventas_y_empleados_por_sucursal;";
@@ -37,7 +38,7 @@ $result = $conn->query($sql);
             border: 1px solid #ddd;
         }
         th {
-            background-color: #0078D7;
+            background-color: #6b8e6b;
             color: white;
             text-transform: uppercase;
         }

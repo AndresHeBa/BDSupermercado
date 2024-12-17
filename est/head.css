@@ -1,0 +1,77 @@
+/* estilos.css */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #b2d8b2;
+    
+    max-width: 1800px; /* Ancho máximo del contenedor */
+    display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+        
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline-block;
+    position: relative;
+    right: auto;
+}
+
+nav ul li a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+}
+
+nav ul li:hover > ul {
+    display: block;
+}
+
+nav ul ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #444;
+}
+
+nav ul ul li {
+    display: block;
+    width: 100px;
+    top: 100%; /* Debajo del elemento padre */
+    right: 0; /* Alinea el submenú con el borde derecho */
+}
+
+nav ul ul li a:hover {
+    background-color: #555;
+    
+}
+nav {
+    display: flex;
+    gap: 20px;
+}
+
+.logo img {
+    height: 50px;
+    width: auto;
+}
+
+header nav ul li {
+    margin-right: 20px; /* Separación entre elementos */
+}
+
+

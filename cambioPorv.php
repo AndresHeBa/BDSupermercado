@@ -1,15 +1,19 @@
 <?php
 include 'mySQLConnection.php';
+include 'header.php';
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Editar Proveedores</title>
+    <link rel="stylesheet" href="est/cambios.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
+
 <body>
     <h1>Editar Proveedores</h1>
 
@@ -29,7 +33,7 @@ include 'mySQLConnection.php';
                 echo "<option value=''>No hay proveedores</option>";
             }
 
-            
+
             ?>
         </select>
         <button type="submit">Editar</button>
@@ -65,28 +69,61 @@ include 'mySQLConnection.php';
         <form id="formProveedor">
             <label for="nombre">Nombre:</label>
             <input type="text" id="nombre" name="nombre" value="<?php echo htmlspecialchars($nombre); ?>" required><br><br>
-            
+
             <label for="telefono">Telefono:</label>
             <input type="text" id="telefono" name="telefono" value="<?php echo htmlspecialchars($telefono); ?>" required><br><br>
-            
+
             <label for="codigoSucursal">Codigo de Sucursal:</label>
-            <input type="number" id="codigoSucursal" name="codigoSucursal" value="<?php echo htmlspecialchars($codigoSucursal); ?>" ><br><br>
-            
+            <input type="number" id="codigoSucursal" name="codigoSucursal" value="<?php echo htmlspecialchars($codigoSucursal); ?>"><br><br>
+
             <label for="tipoArticulo">Tipo de Articulo:</label>
             <input type="text" id="tipoArticulo" name="tipoArticulo" value="<?php echo htmlspecialchars($tipoArticulo); ?>" required><br><br>
-            
+
             <label for="ciudad">Ciudad:</label>
             <input type="text" id="ciudad" name="ciudad" value="<?php echo htmlspecialchars($ciudad); ?>" required><br><br>
-            
+
             <label for="direccion">Direccion:</label>
             <input type="text" id="direccion" name="direccion" value="<?php echo htmlspecialchars($direccion); ?>" required><br><br>
-            
+
             <input type="hidden" name="id" value="<?php echo $id; ?>">
             <button type="submit">Guardar</button>
         </form>
     <?php endif; ?>
 
     <div id="responseMessage" style="margin-top:20px; color: green;"></div>
+
+    <table>
+        <tr>
+            <th>Codigo Proveedor</th>
+            <th>Telefono</th>
+            <th>Nombre</th>
+            <th>Codigo Sucursal</th>
+            <th>Tipo Articulo</th>
+            <th>Ciudad</th>
+            <th>Direccion</th>
+        </tr>
+        <?php
+        $sql = "SELECT * FROM proveedor";
+        $result = $conn->query($sql);
+
+        if ($result->num_rows > 0) {
+            while ($row = $result->fetch_assoc()) {
+                echo "<tr>";
+                echo "<td>" . $row["CodigoProveedor"] . "</td>";
+                echo "<td>" . $row["Telefono"] . "</td>";
+                echo "<td>" . $row["Nombre"] . "</td>";
+                echo "<td>" . $row["CodigoSucursal"] . "</td>";
+                echo "<td>" . $row["TipoArticulo"] . "</td>";
+                echo "<td>" . $row["Ciudad"] . "</td>";
+                echo "<td>" . $row["Direccion"] . "</td>";
+                echo "</tr>";
+            }
+        } else {
+            echo "0 results";
+        }
+        $conn->close();
+        ?>
+    </table>
 
     <script>
         $(document).ready(function() {
@@ -108,4 +145,5 @@ include 'mySQLConnection.php';
         });
     </script>
 </body>
+
 </html>

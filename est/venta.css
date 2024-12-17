@@ -1,0 +1,109 @@
+/* Estilo general para el formulario */
+#agregarArticuloForm {
+    background-color: #e2f4e2; /* Verde claro */
+    margin: 20px auto;
+    padding: 20px;
+    max-width: 500px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: 2px solid #b2d8b2; /* Verde base */
+}
+
+#agregarArticuloForm label {
+    color: #333333;
+    font-size: 16px;
+    margin-bottom: 5px;
+    display: block;
+}
+
+#agregarArticuloForm input[type="number"],
+#agregarArticuloForm input[type="text"],
+#agregarArticuloForm select {
+    width: 95%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 2px solid #b2d8b2;
+    border-radius: 5px;
+    font-size: 14px;
+    color: #333333;
+    background-color: #f0f7f0;
+    outline: none;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+#agregarArticuloForm input[type="number"]:focus,
+#agregarArticuloForm input[type="text"]:focus,
+#agregarArticuloForm select:focus {
+    border-color: #6b8e6b;
+    box-shadow: 0 0 5px #b2d8b2;
+}
+
+#agregarArticuloForm input[type="submit"] {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #93b70a;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+#agregarArticuloForm input[type="submit"]:hover {
+    background-color: #6b8e6b;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Tabla de artículos */
+table {
+    border-collapse: collapse;
+    width: 80%;
+    margin: 20px auto;
+}
+
+th, td {
+    padding: 12px 15px;
+    text-align: left;
+    border: 1px solid #b2d8b2;
+    font-size: 14px;
+}
+
+th {
+    background-color: #93b70a;
+    color: white;
+    text-transform: uppercase;
+}
+
+tr:nth-child(even) {
+    background-color: #f0f7f0;
+}
+
+tr:hover {
+    background-color: #b2d8b2;
+}
+
+td {
+    background-color: #ffffff;
+    color: #333333;
+}
+
+td.empty {
+    text-align: center;
+    color: #888888;
+    font-style: italic;
+}
+
+#formVenta button{
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #93b70a; /* Amarillo verdoso */
+    border: none;
+    color: white;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}

@@ -37,8 +37,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && !empty($_SESSION['carrito'])) {
         // Limpiar el carrito
         unset($_SESSION['carrito']);
         
-        echo "Venta realizada con éxito!";
-        echo "<br><a href='registroVentas.php'>Realizar otra venta</a>";
+        //alert("Venta procesada correctamente");
+        echo "<script>alert('Venta procesada correctamente');
+        window.location.href='registroVentas.php';
+        </script>";
+    
+
         
     } catch (Exception $e) {
         $conn->rollback();

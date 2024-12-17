@@ -1,0 +1,113 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f0f7f0; /* Fondo neutro claro */
+    color: #333333; /* Texto principal oscuro */
+    line-height: 1.6;
+}
+
+/* Contenedor principal */
+h1 {
+    text-align: center;
+    color: #6b8e6b; /* Verde acento oscuro */
+    margin: 20px 0;
+    font-size: 24px;
+}
+
+h2 {
+    text-align: center;
+    color: #93b70a; /* Amarillo verdoso */
+    margin-bottom: 15px;
+    font-size: 20px;
+}
+
+/* Estilos para el select */
+.select {
+    display: block;
+    margin: 10px auto 30px;
+    padding: 10px;
+    width: 90%;
+    max-width: 400px;
+    border: 2px solid #b2d8b2; /* Verde base */
+    border-radius: 5px;
+    background-color: #e2f4e2; /* Verde claro */
+    font-size: 16px;
+    color: #333333; /* Texto oscuro */
+    cursor: pointer;
+    outline: none;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.select:hover {
+    border-color: #6b8e6b; /* Verde oscuro */
+    box-shadow: 0 0 5px #b2d8b2;
+}
+
+/* Estilo general del formulario */
+.formulario {
+    background-color: #e2f4e2; /* Verde claro */
+    margin: 20px auto;
+    padding: 20px;
+    max-width: 400px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: 2px solid #b2d8b2; /* Verde base */
+    
+}
+
+.formulario input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 2px solid #b2d8b2; /* Verde base */
+    border-radius: 5px;
+    font-size: 16px;
+    color: #333333;
+    background-color: #f0f7f0; /* Fondo neutro claro */
+    outline: none;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.formulario input:focus {
+    border-color: #6b8e6b; /* Verde oscuro */
+    box-shadow: 0 0 5px #b2d8b2;
+}
+
+.formulario button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #93b70a; /* Amarillo verdoso */
+    border: none;
+    color: white;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s, box-shadow 0.3s;
+    margin-left: auto;
+}
+
+.formulario button:hover {
+    background-color: #6b8e6b; /* Verde oscuro */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive para pantallas pequeñas */
+@media (max-width: 600px) {
+    .formulario {
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+
+    h2 {
+        font-size: 18px;
+    }
+}

@@ -1,14 +1,6 @@
 <?php
 // Conexión a la base de datos
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "supermarket";
-
-$conn = new mysqli($servername, $username, $password, $dbname);
-if ($conn->connect_error) {
-    die("Conexión fallida: " . $conn->connect_error);
-}
+include 'mySQLConnection.php';
 $conn->set_charset("utf8");
 
 // Comprobar qué formulario se envió

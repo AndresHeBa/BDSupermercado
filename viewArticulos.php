@@ -1,5 +1,6 @@
 <?php 
 include 'mySQLConnection.php';
+include 'header.php';
 
 $sql = "SELECT * FROM ventas_por_articulo_y_unidades_vendidas;";
 $result = $conn->query($sql);
@@ -36,7 +37,7 @@ $result = $conn->query($sql);
             border: 1px solid #ddd;
         }
         th {
-            background-color: #0078D7;
+            background-color: #6b8e6b;
             color: white;
             text-transform: uppercase;
         }

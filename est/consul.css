@@ -1,0 +1,127 @@
+/* Estilo general para el formulario de cambio de gerente */
+#cambiarGerenteForm {
+    background-color: #e2f4e2; /* Verde claro */
+    margin: 20px auto;
+    padding: 20px;
+    max-width: 500px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: 2px solid #b2d8b2; /* Verde base */
+}
+
+/* Estilo de los labels */
+#cambiarGerenteForm label {
+    color: #333333; /* Texto oscuro */
+    font-size: 16px;
+    margin-bottom: 5px;
+    display: block;
+}
+
+/* Estilo de los campos de entrada */
+#cambiarGerenteForm input[type="text"] {
+    width: 95%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 2px solid #b2d8b2; /* Verde base */
+    border-radius: 5px;
+    font-size: 14px;
+    color: #333333;
+    background-color: #f0f7f0; /* Fondo neutro claro */
+    outline: none;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+#cambiarGerenteForm input[type="text"]:focus {
+    border-color: #6b8e6b; /* Verde oscuro */
+    box-shadow: 0 0 5px #b2d8b2;
+}
+
+/* Estilo del botón de cambio de gerente */
+#cambiarGerenteForm input[type="submit"] {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #93b70a; /* Amarillo verdoso */
+    border: none;
+    color: white;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+#cambiarGerenteForm input[type="submit"]:hover {
+    background-color: #6b8e6b; /* Verde oscuro */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive para pantallas pequeñas */
+@media (max-width: 600px) {
+    #cambiarGerenteForm {
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+}
+
+table {
+    border-collapse: collapse;
+    max-width: 1600px;
+    /* Elimina el espacio entre bordes de celdas */
+    width: 80%; /* La tabla ocupa todo el ancho disponible */
+    margin: 20px auto; /* Añade un margen en la parte superior e inferior */
+}
+
+/* Estilo de las celdas de la tabla */
+th, td {
+    padding: 12px 15px; /* Relleno de las celdas */
+    text-align: left; /* Alinea el texto a la izquierda */
+    border: 1px solid #b2d8b2; /* Borde verde claro */
+    font-size: 14px; /* Tamaño de fuente para las celdas */
+}
+
+/* Estilo de los encabezados de la tabla */
+th {
+    background-color: #93b70a; /* Fondo verde amarillento */
+    color: white; /* Texto blanco en los encabezados */
+    font-weight: bold; /* Negrita para los encabezados */
+    text-transform: uppercase; /* Texto en mayúsculas */
+}
+
+/* Estilo para filas alternadas (zebra striping) */
+tr:nth-child(even) {
+    background-color: #f0f7f0; /* Fondo neutro claro para las filas pares */
+}
+
+/* Estilo de las filas cuando el mouse pasa por encima */
+tr:hover {
+    background-color: #b2d8b2; /* Fondo verde claro al pasar el ratón */
+    cursor: pointer; /* Cambia el cursor al pasar el ratón */
+}
+
+/* Estilo para las celdas con datos */
+td {
+    background-color: #ffffff; /* Fondo blanco para las celdas */
+    color: #333333; /* Color de texto oscuro para las celdas */
+}
+
+/* Estilo de la tabla cuando no hay registros */
+td.empty {
+    text-align: center; /* Centra el texto */
+    color: #888888; /* Color gris claro para texto de "No hay datos" */
+    font-style: italic; /* Cursiva para la leyenda */
+}
+
+/* Estilo responsive para pantallas pequeñas */
+@media (max-width: 600px) {
+    table {
+        font-size: 12px; /* Tamaño de fuente más pequeño */
+        margin: 10px 0; /* Márgenes más pequeños */
+    }
+
+    th, td {
+        padding: 8px 10px; /* Relleno reducido en pantallas pequeñas */
+    }
+}

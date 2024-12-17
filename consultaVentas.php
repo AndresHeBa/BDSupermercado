@@ -1,5 +1,6 @@
 <?php 
 include 'mySQLConnection.php';
+include 'header.php';
 
 $sql = "SELECT CodigoSucursal, NombreVendedor, SUM(TotalVenta) AS ventas_vendedor 
         FROM venta GROUP BY CodigoSucursal, NombreVendedor WITH ROLLUP;";
@@ -29,3 +30,6 @@ if ($result->num_rows > 0) {
 
 $conn->close();
 ?>
+<html>
+    <link rel="stylesheet" href="est/consul.css">
+</html>

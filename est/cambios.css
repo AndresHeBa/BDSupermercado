@@ -1,0 +1,663 @@
+/* Estilo general de la página */
+h1 {
+    text-align: center;
+    color: #6b8e6b; /* Verde acento oscuro */
+    margin: 20px 0;
+    font-size: 24px;
+}
+
+/* Estilos para el formulario de seleccionar artículo */
+#selectArticleForm {
+    background-color: #e2f4e2; /* Verde claro */
+    margin: 20px auto;
+    padding: 20px;
+    max-width: 500px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: 2px solid #b2d8b2; /* Verde base */
+}
+
+/* Estilo para el campo de selección */
+#selectArticleForm select {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 2px solid #b2d8b2; /* Verde base */
+    border-radius: 5px;
+    font-size: 16px;
+    color: #333333; /* Texto oscuro */
+    background-color: #f0f7f0; /* Fondo neutro claro */
+    outline: none;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+#selectArticleForm select:focus {
+    border-color: #6b8e6b; /* Verde oscuro */
+    box-shadow: 0 0 5px #b2d8b2;
+}
+
+/* Estilo del botón de enviar */
+#selectArticleForm button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #93b70a; /* Amarillo verdoso */
+    border: none;
+    color: white;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+#selectArticleForm button:hover {
+    background-color: #6b8e6b; /* Verde oscuro */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive para pantallas pequeñas */
+@media (max-width: 600px) {
+    #selectArticleForm {
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+}
+
+/* Estilo general de la página */
+#formArticulo {
+    background-color: #e2f4e2; /* Verde claro */
+    margin: 20px auto;
+    padding: 20px;
+    max-width: 500px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: 2px solid #b2d8b2; /* Verde base */
+}
+
+/* Estilo de los labels */
+#formArticulo label {
+    color: #333333; /* Texto oscuro */
+    font-size: 16px;
+    margin-bottom: 5px;
+    display: block;
+}
+
+/* Estilo de los campos de entrada */
+#formArticulo input[type="text"],
+#formArticulo input[type="number"] {
+    width: 95%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 2px solid #b2d8b2; /* Verde base */
+    border-radius: 5px;
+    font-size: 14px;
+    color: #333333;
+    background-color: #f0f7f0; /* Fondo neutro claro */
+    outline: none;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+#formArticulo input[type="text"]:focus,
+#formArticulo input[type="number"]:focus {
+    border-color: #6b8e6b; /* Verde oscuro */
+    box-shadow: 0 0 5px #b2d8b2;
+}
+
+/* Estilo del botón de guardar cambios */
+#formArticulo button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #93b70a; /* Amarillo verdoso */
+    border: none;
+    color: white;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+#formArticulo button:hover {
+    background-color: #6b8e6b; /* Verde oscuro */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive para pantallas pequeñas */
+@media (max-width: 600px) {
+    #formArticulo {
+        padding: 15px;
+    }
+}
+
+/* Estilo general para el formulario de selección de empleado */
+#selectEmpleado {
+    background-color: #e2f4e2; /* Verde claro */
+    margin: 20px auto;
+    padding: 20px;
+    max-width: 500px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: 2px solid #b2d8b2; /* Verde base */
+}
+
+/* Estilo para el campo de selección de empleado */
+#selectEmpleado select {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 2px solid #b2d8b2; /* Verde base */
+    border-radius: 5px;
+    font-size: 16px;
+    color: #333333; /* Texto oscuro */
+    background-color: #f0f7f0; /* Fondo neutro claro */
+    outline: none;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+#selectEmpleado select:focus {
+    border-color: #6b8e6b; /* Verde oscuro */
+    box-shadow: 0 0 5px #b2d8b2;
+}
+
+/* Estilo del botón de enviar */
+#selectEmpleado button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #93b70a; /* Amarillo verdoso */
+    border: none;
+    color: white;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+#selectEmpleado button:hover {
+    background-color: #6b8e6b; /* Verde oscuro */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilo general para el formulario de empleado */
+#formEmpleado {
+    background-color: #e2f4e2; /* Verde claro */
+    margin: 20px auto;
+    padding: 20px;
+    max-width: 500px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: 2px solid #b2d8b2; /* Verde base */
+}
+
+/* Estilo de los labels */
+#formEmpleado label {
+    color: #333333; /* Texto oscuro */
+    font-size: 16px;
+    margin-bottom: 5px;
+    display: block;
+}
+
+/* Estilo de los campos de entrada */
+#formEmpleado input[type="text"],
+#formEmpleado input[type="number"] {
+    width: 95%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 2px solid #b2d8b2; /* Verde base */
+    border-radius: 5px;
+    font-size: 14px;
+    color: #333333;
+    background-color: #f0f7f0; /* Fondo neutro claro */
+    outline: none;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+#formEmpleado input[type="text"]:focus,
+#formEmpleado input[type="number"]:focus {
+    border-color: #6b8e6b; /* Verde oscuro */
+    box-shadow: 0 0 5px #b2d8b2;
+}
+
+/* Estilo del botón de guardar */
+#formEmpleado button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #93b70a; /* Amarillo verdoso */
+    border: none;
+    color: white;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+#formEmpleado button:hover {
+    background-color: #6b8e6b; /* Verde oscuro */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive para pantallas pequeñas */
+@media (max-width: 600px) {
+    #selectEmpleado, #formEmpleado {
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+}
+
+/* Estilo general para el formulario de selección de proveedor */
+#selectProveedorForm {
+    background-color: #e2f4e2; /* Verde claro */
+    margin: 20px auto;
+    padding: 20px;
+    max-width: 500px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: 2px solid #b2d8b2; /* Verde base */
+}
+
+/* Estilo para el campo de selección de proveedor */
+#selectProveedorForm select {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 2px solid #b2d8b2; /* Verde base */
+    border-radius: 5px;
+    font-size: 16px;
+    color: #333333; /* Texto oscuro */
+    background-color: #f0f7f0; /* Fondo neutro claro */
+    outline: none;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+#selectProveedorForm select:focus {
+    border-color: #6b8e6b; /* Verde oscuro */
+    box-shadow: 0 0 5px #b2d8b2;
+}
+
+/* Estilo del botón de enviar */
+#selectProveedorForm button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #93b70a; /* Amarillo verdoso */
+    border: none;
+    color: white;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+#selectProveedorForm button:hover {
+    background-color: #6b8e6b; /* Verde oscuro */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilo general para el formulario de proveedor */
+#formProveedor {
+    background-color: #e2f4e2; /* Verde claro */
+    margin: 20px auto;
+    padding: 20px;
+    max-width: 500px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: 2px solid #b2d8b2; /* Verde base */
+}
+
+/* Estilo de los labels */
+#formProveedor label {
+    color: #333333; /* Texto oscuro */
+    font-size: 16px;
+    margin-bottom: 5px;
+    display: block;
+}
+
+/* Estilo de los campos de entrada */
+#formProveedor input[type="text"],
+#formProveedor input[type="number"] {
+    width: 95%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 2px solid #b2d8b2; /* Verde base */
+    border-radius: 5px;
+    font-size: 14px;
+    color: #333333;
+    background-color: #f0f7f0; /* Fondo neutro claro */
+    outline: none;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+#formProveedor input[type="text"]:focus,
+#formProveedor input[type="number"]:focus {
+    border-color: #6b8e6b; /* Verde oscuro */
+    box-shadow: 0 0 5px #b2d8b2;
+}
+
+/* Estilo del botón de guardar */
+#formProveedor button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #93b70a; /* Amarillo verdoso */
+    border: none;
+    color: white;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+#formProveedor button:hover {
+    background-color: #6b8e6b; /* Verde oscuro */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive para pantallas pequeñas */
+@media (max-width: 600px) {
+    #selectProveedorForm, #formProveedor {
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+}
+
+/* Estilo general para el formulario de selección de sucursal */
+#selectSucursal {
+    background-color: #e2f4e2; /* Verde claro */
+    margin: 20px auto;
+    padding: 20px;
+    max-width: 500px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: 2px solid #b2d8b2; /* Verde base */
+}
+
+/* Estilo para el campo de selección de sucursal */
+#selectSucursal select {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 2px solid #b2d8b2; /* Verde base */
+    border-radius: 5px;
+    font-size: 16px;
+    color: #333333; /* Texto oscuro */
+    background-color: #f0f7f0; /* Fondo neutro claro */
+    outline: none;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+#selectSucursal select:focus {
+    border-color: #6b8e6b; /* Verde oscuro */
+    box-shadow: 0 0 5px #b2d8b2;
+}
+
+/* Estilo del botón de enviar */
+#selectSucursal button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #93b70a; /* Amarillo verdoso */
+    border: none;
+    color: white;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+#selectSucursal button:hover {
+    background-color: #6b8e6b; /* Verde oscuro */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilo general para el formulario de sucursal */
+#formSucursal {
+    background-color: #e2f4e2; /* Verde claro */
+    margin: 20px auto;
+    padding: 20px;
+    max-width: 500px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: 2px solid #b2d8b2; /* Verde base */
+}
+
+/* Estilo de los labels */
+#formSucursal label {
+    color: #333333; /* Texto oscuro */
+    font-size: 16px;
+    margin-bottom: 5px;
+    display: block;
+}
+
+/* Estilo de los campos de entrada */
+#formSucursal input[type="text"],
+#formSucursal input[type="number"] {
+    width: 95%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 2px solid #b2d8b2; /* Verde base */
+    border-radius: 5px;
+    font-size: 14px;
+    color: #333333;
+    background-color: #f0f7f0; /* Fondo neutro claro */
+    outline: none;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+#formSucursal input[type="text"]:focus,
+#formSucursal input[type="number"]:focus {
+    border-color: #6b8e6b; /* Verde oscuro */
+    box-shadow: 0 0 5px #b2d8b2;
+}
+
+/* Estilo del botón de guardar cambios */
+#formSucursal button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #93b70a; /* Amarillo verdoso */
+    border: none;
+    color: white;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+#formSucursal button:hover {
+    background-color: #6b8e6b; /* Verde oscuro */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive para pantallas pequeñas */
+@media (max-width: 600px) {
+    #selectSucursal, #formSucursal {
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+}
+
+/* Estilo general para el formulario de selección de venta */
+#selectVenta {
+    background-color: #e2f4e2; /* Verde claro */
+    margin: 20px auto;
+    padding: 20px;
+    max-width: 500px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: 2px solid #b2d8b2; /* Verde base */
+}
+
+/* Estilo para el campo de selección de venta */
+#selectVenta select {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 2px solid #b2d8b2; /* Verde base */
+    border-radius: 5px;
+    font-size: 16px;
+    color: #333333; /* Texto oscuro */
+    background-color: #f0f7f0; /* Fondo neutro claro */
+    outline: none;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+#selectVenta select:focus {
+    border-color: #6b8e6b; /* Verde oscuro */
+    box-shadow: 0 0 5px #b2d8b2;
+}
+
+/* Estilo del botón de enviar */
+#selectVenta button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #93b70a; /* Amarillo verdoso */
+    border: none;
+    color: white;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+#selectVenta button:hover {
+    background-color: #6b8e6b; /* Verde oscuro */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilo general para el formulario de venta */
+#formVenta {
+    background-color: #e2f4e2; /* Verde claro */
+    margin: 20px auto;
+    padding: 20px;
+    max-width: 500px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: 2px solid #b2d8b2; /* Verde base */
+}
+
+/* Estilo de los labels */
+#formVenta label {
+    color: #333333; /* Texto oscuro */
+    font-size: 16px;
+    margin-bottom: 5px;
+    display: block;
+}
+
+/* Estilo de los campos de entrada */
+#formVenta input[type="text"],
+#formVenta input[type="number"],
+#formVenta input[type="date"] {
+    width: 95%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 2px solid #b2d8b2; /* Verde base */
+    border-radius: 5px;
+    font-size: 14px;
+    color: #333333;
+    background-color: #f0f7f0; /* Fondo neutro claro */
+    outline: none;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+#formVenta input[type="text"]:focus,
+#formVenta input[type="number"]:focus,
+#formVenta input[type="date"]:focus {
+    border-color: #6b8e6b; /* Verde oscuro */
+    box-shadow: 0 0 5px #b2d8b2;
+}
+
+/* Estilo del botón de guardar cambios */
+#formVenta button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #93b70a; /* Amarillo verdoso */
+    border: none;
+    color: white;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+#formVenta button:hover {
+    background-color: #6b8e6b; /* Verde oscuro */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive para pantallas pequeñas */
+@media (max-width: 600px) {
+    #selectVenta, #formVenta {
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+}
+
+/* Tabla */
+table {
+    border-collapse: collapse;
+    width: 80%;
+    margin: 20px auto;
+}
+
+th, td {
+    padding: 12px 15px;
+    text-align: left;
+    border: 1px solid #b2d8b2;
+    font-size: 14px;
+}
+
+th {
+    background-color: #93b70a;
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+tr:nth-child(even) {
+    background-color: #f0f7f0;
+}
+
+tr:hover {
+    background-color: #b2d8b2;
+    cursor: pointer;
+}
+
+td {
+    background-color: #ffffff;
+    color: #333333;
+}
+
+td.empty {
+    text-align: center;
+    color: #888888;
+    font-style: italic;
+}
+
+@media (max-width: 600px) {
+    table {
+        font-size: 12px;
+        margin: 10px 0;
+    }
+
+    th, td {
+        padding: 8px 10px;
+    }
+}

@@ -1,0 +1,86 @@
+/* Estilo general para el formulario */
+h4 {
+    text-align: center;
+    color: #6b8e6b; /* Verde acento oscuro */
+    margin: 20px 0;
+    font-size: 20px;
+}
+
+
+
+form {
+    background-color: #e2f4e2; /* Fondo verde claro */
+    margin: 20px auto;
+    padding: 20px;
+    max-width: 400px; /* Máximo ancho para el formulario */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: 2px solid #b2d8b2; /* Borde verde claro */
+}
+
+/* Estilo para los labels */
+form label {
+    color: #333333; /* Color de texto oscuro */
+    font-size: 16px;
+    margin-bottom: 5px;
+    display: block;
+}
+
+/* Estilo para el campo de entrada (input) */
+form input[type="text"] {
+    width: 95%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 2px solid #b2d8b2; /* Borde verde base */
+    border-radius: 5px;
+    font-size: 14px;
+    color: #333333; /* Texto oscuro */
+    background-color: #f0f7f0; /* Fondo neutro claro */
+    outline: none;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+/* Estilo para el campo de entrada en foco (cuando el usuario hace clic en él) */
+form input[type="text"]:focus {
+    border-color: #6b8e6b; /* Borde verde oscuro */
+    box-shadow: 0 0 5px #b2d8b2;
+}
+
+/* Estilo del botón de enviar */
+form input[type="submit"] {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #93b70a; /* Amarillo verdoso */
+    border: none;
+    color: white;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+/* Efecto al pasar el mouse sobre el botón */
+form input[type="submit"]:hover {
+    background-color: #6b8e6b; /* Verde oscuro */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilo para pantallas pequeñas (responsive) */
+@media (max-width: 600px) {
+    form {
+        padding: 15px;
+    }
+
+    form label {
+        font-size: 14px;
+    }
+
+    form input[type="text"] {
+        font-size: 14px;
+    }
+
+    form input[type="submit"] {
+        font-size: 14px;
+    }
+}

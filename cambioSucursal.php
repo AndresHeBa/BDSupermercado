@@ -1,15 +1,19 @@
 <?php
 include 'mySQLConnection.php';
+include 'header.php';
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Editar Sucursal</title>
+    <link rel="stylesheet" href="est/cambios.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
+
 <body>
     <h1>Editar Sucursal</h1>
 
@@ -54,9 +58,6 @@ include 'mySQLConnection.php';
     } else {
         die("No se proporcionó un Código de Sucursal.");
     }
-
-    //cerrar 
-    $conn->close();
     ?>
 
     <!-- Formulario para editar una sucursal -->
@@ -84,6 +85,37 @@ include 'mySQLConnection.php';
 
     <div id="responseMessage" style="margin-top:20px; color: green;"></div>
 
+    <table>
+        <tr>
+            <th>Codigo Sucursal</th>
+            <th>Codigo Gerente</th>
+            <th>Codigo Proveedor</th>
+            <th>Ciudad</th>
+            <th>Direccion</th>
+            <th>CP</th>
+        </tr>
+        <?php
+        $sql = "SELECT * FROM sucursal";
+        $result = $conn->query($sql);
+
+        if ($result->num_rows > 0) {
+            while ($row = $result->fetch_assoc()) {
+                echo "<tr>";
+                echo "<td>" . $row["CodigoSucursal"] . "</td>";
+                echo "<td>" . $row["CodigoGerente"] . "</td>";
+                echo "<td>" . $row["CodigoProveedor"] . "</td>";
+                echo "<td>" . $row["Ciudad"] . "</td>";
+                echo "<td>" . $row["Direccion"] . "</td>";
+                echo "<td>" . $row["CP"] . "</td>";
+                echo "</tr>";
+            }
+        } else {
+            echo "0 results";
+        }
+        $conn->close();
+        ?>
+    </table>
+
     <script>
         $(document).ready(function() {
             $('#formSucursal').on('submit', function(e) {
@@ -105,4 +137,5 @@ include 'mySQLConnection.php';
         });
     </script>
 </body>
+
 </html>

@@ -1,5 +1,6 @@
 <?php 
 include 'mySQLConnection.php';
+include 'header.php';
 
 $sql = "SELECT * FROM empleado;";
 $result = $conn->query($sql);
@@ -30,13 +31,16 @@ if ($result->num_rows > 0) {
 $conn->close();
 ?>
 <html>
+    <link rel="stylesheet" href="est/consul.css">
     <body>
-    <form action="cambiarGerente.php" method="POST">
-        <label for="vjoGerente">Viejo Gerente:</label><br>
-        <input type="text" id="vjoGerente" name="vjoGerente"><br>
-        <label for="nvoGerente">Nuevo Gerente:</label><br>
-        <input type="text" id="nvoGerente" name="nvoGerente"><br><br>
-        <input type="submit" value="Cambiar Gerente">
-    </form> 
+    <form action="cambiarGerente.php" method="POST" id="cambiarGerenteForm">
+    <label for="vjoGerente">Viejo Gerente:</label><br>
+    <input type="text" id="vjoGerente" name="vjoGerente"><br>
+    
+    <label for="nvoGerente">Nuevo Gerente:</label><br>
+    <input type="text" id="nvoGerente" name="nvoGerente"><br><br>
+    
+    <input type="submit" value="Cambiar Gerente">
+</form> 
     </body>
 </html>

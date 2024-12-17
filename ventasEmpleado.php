@@ -1,16 +1,8 @@
-<html>
-    <body>
-        <h4>Buscar Ventas de Vendedor</h4>
-        <form method="POST">
-            <label for="vendedor">Nombre del Vendedor</label><br>
-            <input type="text" id="vendedor" name="vendedor"><br>
-            <input type="submit" value="Mostrar Ventas">
-        </form> 
-    </body>
-</html>
 
 <?php 
 include 'mySQLConnection.php';
+include 'header.php';
+
 
 if (isset($_POST['vendedor'])) {
     $sql = "CALL ventasVendedor('" . $_POST["vendedor"] . "')";
@@ -39,3 +31,16 @@ if (isset($_POST['vendedor'])) {
 }
 $conn->close();
 ?>
+
+<html>
+    <link rel="stylesheet" href="est/reportes.css">
+    <body>
+        <h4>Buscar Ventas de Vendedor</h4>
+        <form method="POST">
+    <label for="vendedor">Nombre del Vendedor:</label><br>
+    <input type="text" id="vendedor" name="vendedor"><br>
+    <input type="submit" value="Mostrar Ventas">
+</form>
+
+    </body>
+</html>
